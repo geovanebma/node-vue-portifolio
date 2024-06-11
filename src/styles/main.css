@@ -12,12 +12,17 @@ header{
   position: fixed;
   width: 100%;
   margin-top: -50px;
+  z-index: 999;
 }
 
 header span{
   color: #fff;
   font-size: 25px;
   cursor: pointer;  
+}
+
+section{
+  /* height: 100vh; */
 }
 
 article, aside{
@@ -27,6 +32,14 @@ article, aside{
 h1{
   font-weight: 900;
   color: #db0c21;
+}
+
+hr{
+  z-index: -1;
+}
+
+nav{
+  z-index: 10001;
 }
 
 
@@ -63,6 +76,27 @@ h1{
   width: 100%;
 }
 
+#skills_div aside{
+  /* border-right: 1px solid #db0c21; */
+}
+
+#contato_div{
+  background-color: #db0c21;
+  color: #fff;
+  z-index: 10001 !important;
+  margin-top: 92px;
+  padding: 10px;
+}
+
+#footer_social_media a{
+  color: #fff;
+  text-decoration-color: white;
+}
+
+#footer_social_media a:hover{
+  transform: scale(1.1);
+}
+
 
 /* Classes */
 .icons{
@@ -90,9 +124,21 @@ h1{
   margin: 4px 8px;
 }
 
+.icons-small{
+  color: #fff;
+  cursor: pointer;
+  font-size: 15px;
+  transition: 0.3s;
+  margin: 4px 8px;
+}
+
 .icons-large:hover{
   color: #333;
   transition: 0.3s;
+}
+
+.float-left{
+  text-align: left !important;
 }
 
 .sidebar {
@@ -141,9 +187,11 @@ h1{
   color: #fff;
   font-size: 20px;
   font-weight: bold;
-  margin: 15px;
+  margin: 0px;
   cursor: pointer;
   transition: 0.3s;
+  border: none;
+  background-color: #db0c21;
 }
 
 .menu_btn:hover{
@@ -160,6 +208,11 @@ h1{
   overflow: hidden;
 }
 
+.project_div a{
+  width: 100%;
+  height: 100%;
+}
+
 .project_div img {
   display: block;
   width: 100%;
@@ -168,11 +221,6 @@ h1{
 
 .project_div:hover img {
   transform: scale(1.1); /* Aumenta a imagem */
-}
-
-.project_div:hover .portfolio-overlay {
-  opacity: 1; /* Torna o overlay visível */
-  cursor: pointer;
 }
 
 .portfolio-overlay {
@@ -206,35 +254,112 @@ h1{
   cursor: pointer;
 }
 
+.icons_div{
+  border: 2px solid #db0c21;
+  border-radius: 10px;
+}
+
+.skills_icons{
+  width: 7vh;
+  cursor: pointer;
+}
+
+.active_page{
+  border-bottom: 3px solid #db0c21;
+  border-right: 3px solid #db0c21 !important;
+  cursor: pointer;
+}
+
+.active_page h3{
+  color: #db0c21;
+  font-weight: 900;
+}
+
+.comum_page{
+  border-bottom: 1px solid #333;
+  cursor: pointer;
+}
+
+.comum_page h3{
+  color: #333;
+  font-weight: 100;
+}
+
+.border_right{
+  border-right: 1px solid #333;
+}
+
+.skill_square{
+  text-align: center;
+}
+
+.strong{
+  font-weight: 900;
+}
+
+.visible{
+  display: block;
+}
+
+.dont_visible{
+  display: none;
+}
+
+.titulos_projetos label{
+  font-weight: 900;
+}
+
 /* Media */
 @media (min-width: 0px) {
   aside{display: none;}
+  section{padding: 15px;}
+
+  .titulos_projetos{display: block;}
+  .col-sm-3 {flex: 0 0 auto;width: 25%;}
 
   #apresentacao{display: inline-block;}
   #apresentacao span{font-size: 1em;}
   #menu_header{display: none;}
+  #title_skills h3{font-size: 3vh;}
 }
 
 @media (min-width: 576px) {
   aside{display: none;}
 
+  .titulos_projetos{display: block;}
+
   #apresentacao{display: inline-block;}
   #apresentacao span{font-size: 1.5em;}
   #menu_header{display: none;}
+  #title_skills h3{font-size: 3vh;}
 }
 
 @media (min-width: 768px) {
   aside{display: inline-block;}
 
+  .titulos_projetos{display: none;}
+  .project_div:hover .portfolio-overlay {
+    opacity: 1; /* Torna o overlay visível */
+    cursor: pointer;
+  }
+
   #apresentacao{display: none;}
   #menu_hamburguer{display: none;}
   #menu_header{display: inline-block;}
+  #title_skills h3{font-size: 4vh;}
 }
 
 @media (min-width: 992px) {
   aside{display: inline-block;}
 
+  .titulos_projetos{display: none;}
+  .project_div:hover .portfolio-overlay {
+    opacity: 1; /* Torna o overlay visível */
+    cursor: pointer;
+  }
+
   #apresentacao{display: none;}
   #menu_hamburguer{display: none;}
   #menu_header{display: inline-block;}
+  #title_skills h3{font-size: 4vh;}
 }

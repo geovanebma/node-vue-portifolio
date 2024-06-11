@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h2 class="titulo_especial">Geovane Barbosa - FullStack Developer</h2>
+    <h2 class="titulo_especial">Geovane Barbosa</h2>
+    <h4>FullStack Developer</h4>
+    <br>
     <span>Criador de projetos, websites, sistemas, API's e tudo mais...</span>
     <hr>
     <h4>Um pouco sobre</h4>
