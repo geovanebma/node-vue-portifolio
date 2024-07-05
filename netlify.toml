@@ -3,7 +3,7 @@
   publish = "dist"
 
 [build.environment]
-  NODE_VERSION = "16"
+  NODE_VERSION = "14.17.0"
 
 [context.production.environment]
   NODE_ENV = "production"
